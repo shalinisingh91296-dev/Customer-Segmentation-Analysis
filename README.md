@@ -97,28 +97,26 @@ Date Table =
   * Frequency Score
   
        Frequency Score =
-    
                         SWITCH (
-                        TRUE(),
-                      [Frequency] >= 20, 5,
-                      [Frequency] >= 15, 4,
-                      [Frequency] >= 10, 3,
-                      [Frequency] >= 5, 2,
-                             1
+                         TRUE(),
+                        [Frequency] >= 20, 5,
+                        [Frequency] >= 15, 4,
+                        [Frequency] >= 10, 3,
+                        [Frequency] >= 5, 2,
+                                          1
                               )
 
 
 * Monetory Score
 
      Monetary Score =
-  
                       SWITCH (
-                    TRUE(),
-                   [Monetary] >= 10000, 5,
-                   [Monetary] >= 7000, 4,
-                   [Monetary] >= 4000, 3,
-                   [Monetary] >= 2000, 2,
-                            1
+                       TRUE(),
+                      [Monetary] >= 10000, 5,
+                      [Monetary] >= 7000, 4,
+                      [Monetary] >= 4000, 3,
+                      [Monetary] >= 2000, 2,
+                                          1
                          )
 
 
