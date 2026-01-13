@@ -150,9 +150,11 @@ Date Table =
       * Total Customers
       * Total Revenue
       * Avg Revenue per Customer
+      
    2. Bar Chart: Customers by Segment
    3. Donut Chart: Revenue by Segment
    4. Line chart: Monthly Revenue
+   
 
    Page 2: RFM Analysis
    1. Table: CustomerID | R | F | M | Segment
