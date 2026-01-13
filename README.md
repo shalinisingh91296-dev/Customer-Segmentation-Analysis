@@ -96,7 +96,7 @@ Date Table =
     
   * Frequency Score
   
-    Frequency Score =
+       Frequency Score =
                       SWITCH (
                         TRUE(),
                       [Frequency] >= 20, 5,
@@ -109,7 +109,7 @@ Date Table =
 
 * Monetory Score
 
-  Monetary Score =
+     Monetary Score =
                    SWITCH (
                     TRUE(),
                    [Monetary] >= 10000, 5,
