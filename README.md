@@ -28,11 +28,17 @@ I have used an e-commerce dataset for this project.
 
 # Data Modeling
 Single fact table is enough for this project but we can still create a date table if we need some advaned DAX measures.
+
 Date Table = 
+
               ADDCOLUMNS(
+              
                      CALENDAR(DATE(2020,1,1),DATE(2025,12,31)),
+                     
                      "Year", YEAR([Date]),
+                     
                      "Month" FORMAT([Date], "MMM"),
+                     
                      "Month-Name",MONTH([Date])
                      )
                      
