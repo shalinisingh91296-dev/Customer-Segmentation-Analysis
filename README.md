@@ -1,6 +1,8 @@
 # Customer-Segmentation-Analysis
 
 # Overview
+I have built an end-to-end RFM based customer segmentation using Power BI and DAX. Analyzed customer purchasing behaviour to classify customers into champions, loyal, at risk, and lost segments. Designed interactive dashborads with KPIs, RFM scoring, and actionable insights that improved targeted marketing startegy and customer retention.
+
 
 # Business Objective
 
