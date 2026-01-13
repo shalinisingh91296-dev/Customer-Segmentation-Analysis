@@ -132,5 +132,18 @@ Date Table =
                  [Recency Score] + [Frequency Score] + [Monetary Score]
 
 # Customer Segment Classification
+
+       Customer Segment =
+                          SWITCH (
+                           TRUE(),
+                          [RFM Score] >= 13, "Champions",
+                          [RFM Score] >= 10, "Loyal Customers",
+                          [RFM Score] >= 7, "Potential Loyalists",
+                          [RFM Score] >= 5, "At Risk",
+                                            "Lost Customers"
+                                  )
+
+    
+
 # Dashboard Design
 # Business Insights
