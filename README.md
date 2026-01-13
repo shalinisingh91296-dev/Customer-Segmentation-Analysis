@@ -82,6 +82,7 @@ Date Table =
 
 # RFM scoring on scale of 1-5
   * Recency Score (Lower is better)
+    
         Recency Score =
                         SWITCH (
                          TRUE(),
@@ -91,6 +92,7 @@ Date Table =
                          [Recency] <= 180, 2,
                                 1
                               )
+
     
   * Frequency Score =
                       SWITCH (
@@ -101,6 +103,7 @@ Date Table =
                       [Frequency] >= 5, 2,
                              1
                               )
+
 
 * Monetary Score =
                    SWITCH (
