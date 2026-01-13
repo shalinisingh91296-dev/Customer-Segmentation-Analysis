@@ -126,6 +126,7 @@ Date Table =
    * RFM Total Score
     
       RFM Score =
+     
                  [Recency Score] + [Frequency Score] + [Monetary Score]
 
 # Customer Segment Classification
