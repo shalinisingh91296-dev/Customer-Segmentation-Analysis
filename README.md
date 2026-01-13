@@ -123,6 +123,11 @@ Date Table =
 
 
 # Customer Segment Logic
+   * RFM Total Score
+    
+      RFM Score =
+                 [Recency Score] + [Frequency Score] + [Monetary Score]
+
 # Customer Segment Classification
 # Dashboard Design
 # Business Insights
