@@ -46,9 +46,78 @@ Date Table =
 
 # RFM Analysis Explaination
 
+([<img width="385" height="123" alt="image" src="https://github.com/user-attachments/assets/3c1a454f-7b76-4c1e-b20b-773450b5b778" />])
+
+
 
 # Core DAX measures for RFM
+  * Recency =
+             DATEDIFF (
+    
+            [Last Purchase Date],
+    
+            MAX ( Sales[OrderDate] ),
+    
+            DAY
+    
+            )
+    * Frequency =
+                   CALCULATE (
+      
+                   DISTINCTCOUNT ( Sales[OrderID] ),
+      
+                   ALLEXCEPT ( Sales, Sales[CustomerID] )
+      
+                 )
+
+    * Monetary =
+                 CALCULATE (
+      
+                  SUM ( Sales[Sales] ),
+      
+                  ALLEXCEPT ( Sales, Sales[CustomerID] )
+      
+                  )
+
+
 # RFM scoring on scale of 1-5
+  * Recency Score (Lower is better)
+        Recency Score =
+                        SWITCH (
+                         TRUE(),
+                         [Recency] <= 30, 5,
+                         [Recency] <= 60, 4,
+                         [Recency] <= 90, 3,
+                         [Recency] <= 180, 2,
+                                1
+                              )
+    
+  * Frequency Score =
+                      SWITCH (
+                        TRUE(),
+                      [Frequency] >= 20, 5,
+                      [Frequency] >= 15, 4,
+                      [Frequency] >= 10, 3,
+                      [Frequency] >= 5, 2,
+                             1
+                              )
+
+* Monetary Score =
+                   SWITCH (
+                    TRUE(),
+                   [Monetary] >= 10000, 5,
+                   [Monetary] >= 7000, 4,
+                   [Monetary] >= 4000, 3,
+                   [Monetary] >= 2000, 2,
+                            1
+
+                         )
+
+
+
+
+
+
 # Customer Segment Logic
 # Customer Segment Classification
 # Dashboard Design
