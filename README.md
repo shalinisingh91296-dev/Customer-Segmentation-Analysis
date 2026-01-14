@@ -30,15 +30,10 @@ I have used an e-commerce dataset for this project.
 Single fact table is enough for this project but we can still create a date table if we need some advaned DAX measures.
 
 Date Table = 
-
-              ADDCOLUMNS(
-              
+             ADDCOLUMNS(
                      CALENDAR(DATE(2020,1,1),DATE(2025,12,31)),
-                     
                      "Year", YEAR([Date]),
-                     
                      "Month" FORMAT([Date], "MMM"),
-                     
                      "Month-Name",MONTH([Date])
                      )
                      
@@ -53,30 +48,21 @@ Date Table =
 # Core DAX measures for RFM
   * Recency =
              DATEDIFF (
-    
             [Last Purchase Date],
-    
             MAX ( Sales[OrderDate] ),
-    
             DAY
-    
             )
+    
     * Frequency =
-                   CALCULATE (
-      
-                   DISTINCTCOUNT ( Sales[OrderID] ),
-      
+                 CALCULATE (
+                 DISTINCTCOUNT ( Sales[OrderID] ),
                    ALLEXCEPT ( Sales, Sales[CustomerID] )
-      
                  )
 
     * Monetary =
                  CALCULATE (
-      
                   SUM ( Sales[Sales] ),
-      
                   ALLEXCEPT ( Sales, Sales[CustomerID] )
-      
                   )
 
 
